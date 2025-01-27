@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1
+        {
+            text-align: center;
+            color: red;
+        }
+        p
+        {
+            font-size: xx-large;
+            border: 1px solid black;
+            border-radius: 1vh;
+            height: 7vh;
+            width: 7vw;
+            text-align: center;
+            align-content: center;
+
+        }
+        .main
+        {
+          border: 2px solid black;
+          border-radius: 2vh;
+          height: 30vh;
+          width: 40vw;
+          margin: auto;
+          background-color: antiquewhite;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        button
+        {
+            height: 5vh;
+            width: 9vw;
+            align-content: center;
+            text-align: center;
+            border-radius: 2vh;
+            border: 1px solid black;
+            font-size:medium;
+        }
+        .btns
+        {
+            display: flex;
+            column-gap: 2vh;
+            position: relative;
+            top: -1vh;
+        }
+        #increment:active
+        {
+            background-color: rgb(9, 171, 9);
+        }
+        #decrement:active
+        {
+            background-color:red;
+        }
+        #reset:active
+        {
+            background-color:rgb(235, 235, 61);
+        }
+    </style>
+</head>
+<body>
+    <h1>COUNTER APPLICATION</h1>
+    <div class="main">
+        <div>
+           <p id="op">0</p>
+        </div>
+        <div class="btns">
+            <button onclick="decrement()">-</button>
+            <button onclick="reset()">reset</button>
+            <button onclick="increment()">+</button>
+        </div>
+    </div>
+    <script>
+        let x =0
+        function increment()
+        {
+            x +=1
+            console.log(x)
+            document.getElementById("op").innerHTML=x
+        }
+        function decrement()
+        {
+            x -=1
+            console.log(x)
+            document.getElementById("op").innerHTML=x
+        }
+        function reset ()
+        {
+            x = 0
+            console.log(x)
+            document.getElementById("op").innerHTML=x
+        }
+    </script>
+</body>
+</html>
